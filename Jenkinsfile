@@ -50,7 +50,7 @@ environment {
         echo "Param path :"$paramPath
 
         # login to the dev environment
-        apictl login dev -u admin -p admin -k
+        apictl login dev -u admin -p admin -k '''
        
       
 
