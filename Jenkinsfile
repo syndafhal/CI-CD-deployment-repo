@@ -19,7 +19,11 @@ node {
     stage('Preparation') {
         git branch: "dev",
         url: 'https://github.com/chamilaadhi/poc-cicd-deployment-repo.git'
-        sh '''#!/bin/bash
-        echo $location '''
     }
-}
+    
+    stage('Setup Environment for APICTL') {
+        sh '''#!/bin/bash
+        echo $location
+        
+        '''
+    }}
