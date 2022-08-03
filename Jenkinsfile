@@ -1,7 +1,4 @@
-
-
-    
- node {
+node {
 
     properties([
         pipelineTriggers([
@@ -17,48 +14,12 @@
         ]
         ])
     ]
-              )
+    )
 
-
- 
-    
-
-   
-
-   
-        
-        stage('Preparation') {
-        
-        git branch: "main",
-        url: 'https://github.com/syndafhal/Deployment.git'
+    stage('Preparation') {
+        git branch: "dev",
+        url: 'https://github.com/chamilaadhi/poc-cicd-deployment-repo.git'
+        sh '''#!/bin/bash
+        echo $location '''
     }
-    
-        
-
-        stage('Setup Environment for APICTL') {
-            
-            environment {
-               PATH = "/home/synda/Bureau/apictl:$PATH"}
-    
-                sh '''#!/bin/bash
-                #rm /var/lib/jenkins/workspace/gitconfig
-                #touch /var/lib/jenkins/workspace/gitconfig
-                apictl set --vcs-config-path /var/lib/jenkins/workspace/gitconfig
-                envs=$(apictl get envs --format "{{.Name}}")
-                if [ -z "$envs" ]; 
-                then 
-                    echo "No environment configured. Setting dev environment.."
-                    apictl add env dev --apim https://10.1.31.188:9443 
-                else
-                    echo "Environments :"$envs10.1.31.18810.1.31.188
-                    if [[ $envs != *"dev"* ]]; then
-                    echo "Dev environment is not configured. Setting dev environment.."
-                    apictl add env dev --apim https://10.1.31.188:9443 
-                    fi
-                fi
-                '''
-            
-        }
-        
-   
 }
