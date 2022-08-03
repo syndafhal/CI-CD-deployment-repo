@@ -46,6 +46,23 @@ environment {
 
         # download the artifact from the artifact repository
         wget https://server2.jfrog.io/artifactory/repo/$location
+        # derive param content name 
+        fileName=$(echo $name | sed 's/\\(.*\\).zip/\\1 /')
+        deploymentName=$(echo $fileName | sed 's/\\(.*\\)_/\\1-/')
+        paramPath="DeploymentArtifacts_"$deploymentName
+        echo "Param path :"$paramPath
+
+        # login to the dev environment
+        apictl login dev -u admin -p admin -k
+        # import the artifact
+        message=$(apictl import api -f $name --params $paramPath -e dev --update -k)
+        if [ "$message" = "Successfully imported API." ]; then
+            echo "Successfully imported API."
+        else
+            echo $message
+        fi
+        rm $name
+
 
       
 
