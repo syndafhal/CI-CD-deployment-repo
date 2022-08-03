@@ -54,6 +54,10 @@ environment {
        
         # login to the dev environment
         apictl login dev -u admin -p admin -k
+        # import the artifact
+        message=$(apictl import api -f SwaggerPetstore --params $paramPath -e dev --update -k)
+    
+
 
         '''
                 
