@@ -45,13 +45,8 @@ environment {
          sh '''#!/bin/bash
 
         # download the artifact from the artifact repository
-        wget https://server2.jfrog.io/artifactory/repo/$location
-        # derive param content name 
-        fileName=$(echo $name | sed 's/\\(.*\\).zip/\\1 /')
-        deploymentName=$(echo $fileName | sed 's/\\(.*\\)_/\\1-/')
-        echo $deploymentName
-        paramPath="DeploymentArtifacts_"$deploymentName
-        echo "Param path :"$paramPath
+        wget https://server2.jfrog.io/artifactory/repo/PetstoreAPI/1.0.0/SwaggerPetstore_1.0.0.zip 
+      
 
       
 
