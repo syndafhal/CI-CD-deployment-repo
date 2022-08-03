@@ -45,7 +45,7 @@ environment {
          sh '''#!/bin/bash
 
         # download the artifact from the artifact repository
-        wget https://server2/artifactory/repo/$location
+        wget https://server2.jfrog.io/artifactory/repo/$location
 
       
 
