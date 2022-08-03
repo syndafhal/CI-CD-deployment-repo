@@ -19,7 +19,7 @@ pipeline {
     ]
               )
 
-}}
+}
     
     
 environment {
@@ -60,4 +60,4 @@ environment {
         }
         
    
-}}
+    }}}
