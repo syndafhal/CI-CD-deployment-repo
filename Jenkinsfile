@@ -1,3 +1,14 @@
+
+pipeline {
+
+    agent any
+    
+    
+environment {
+        PATH = "/home/synda/Bureau/apictl:$PATH"
+    }
+
+
 node {
 
     properties([
@@ -15,9 +26,7 @@ node {
         ])
     ]
     )
-environment {
-        PATH = "/home/synda/Bureau/apictl:$PATH"
-    }
+
 
 
 
@@ -25,6 +34,7 @@ environment {
         git branch: "main",
         url: 'https://github.com/syndafhal/Deployment.git'
     }
+
     
     stage('Setup Environment for APICTL') {
         sh '''#!/bin/bash
@@ -46,5 +56,4 @@ environment {
     
 
      
-}
-
+}}
