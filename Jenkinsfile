@@ -28,12 +28,12 @@ environment {
                 if [ -z "$envs" ]; 
                 then 
                     echo "No environment configured. Setting dev environment.."
-                    apictl add env dev --apim https://10.1.31.188:9443 
+                    apictl add env dev --apim https://10.1.14.6:9443 
                 else
                     echo "Environments :"$envs
                     if [[ $envs != *"dev"* ]]; then
                     echo "Dev environment is not configured. Setting dev environment.."
-                    apictl add env dev --apim https://10.1.31.188:9443 
+                    apictl add env dev --apim https://10.1.14.6:9443 
                     fi
                 fi
                 '''
@@ -50,7 +50,18 @@ environment {
         echo "Param path :"$paramPath
 
         # login to the dev environment
-        apictl login dev -u admin -p admin -k '''
+        apictl login dev -u admin -p admin -k 
+        # import the artifact
+        message=$(apictl import api -f SwaggerPetstore --params $paramPath -e dev --update -k)
+        if [ "$message" = "Successfully imported API." ]; then
+            echo "Successfully imported API."
+        else
+            echo $message
+        fi
+        rm $name
+
+        '''
+                
        
       
 
