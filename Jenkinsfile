@@ -1,15 +1,7 @@
 
 pipeline {
 
-    agent any
-    
-    
-environment {
-        PATH = "/home/synda/Bureau/apictl:$PATH"
-    }
-    stages {
-
-node {
+    node {
 
     properties([
         pipelineTriggers([
@@ -25,9 +17,17 @@ node {
         ]
         ])
     ]
-    )
+              )}
+    
+    
+environment {
+        PATH = "/home/synda/Bureau/apictl:$PATH"
+    }
+ 
 
 
+
+    stages {
 
 
     stage('Preparation') {
@@ -56,5 +56,5 @@ node {
     
 
      
-}}
+}
 }
