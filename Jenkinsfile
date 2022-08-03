@@ -24,6 +24,9 @@
 
     
     stage('Setup Environment for APICTL') {
+        environment {
+        PATH = "/home/synda/Bureau/apictl:$PATH"
+    }
         sh '''#!/bin/bash
         envs=$(apictl get envs --format "{{.Name}}")
         if [ -z "$envs" ]; 
