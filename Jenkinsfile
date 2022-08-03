@@ -1,3 +1,12 @@
+pipeline {
+
+    agent any
+    
+    
+environment {
+        PATH = "/home/synda/Bureau/apictl:$PATH"
+    }
+
 node {
 
     properties([
@@ -39,4 +48,9 @@ node {
             fi
         fi
         '''
-    }}
+    }
+
+
+     
+}
+}
