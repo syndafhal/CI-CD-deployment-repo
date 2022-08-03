@@ -1,6 +1,6 @@
-pipeline {
 
-    agent {
+
+    
  node {
 
     properties([
@@ -19,12 +19,10 @@ pipeline {
     ]
               )
 
-}
+
+ 
     
-    
-environment {
-        PATH = "/home/synda/Bureau/apictl:$PATH"
-    }
+
    
 
     stages {
@@ -39,6 +37,9 @@ environment {
 
         stage('Setup Environment for APICTL') {
             steps {
+            environment {
+               PATH = "/home/synda/Bureau/apictl:$PATH"}
+    
                 sh '''#!/bin/bash
                 #rm /var/lib/jenkins/workspace/gitconfig
                 #touch /var/lib/jenkins/workspace/gitconfig
@@ -60,4 +61,4 @@ environment {
         }
         
    
-    }}}
+}}
