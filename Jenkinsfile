@@ -24,6 +24,7 @@ environment {
                 #rm /var/lib/jenkins/workspace/gitconfig
                 #touch /var/lib/jenkins/workspace/gitconfig
                 apictl set --vcs-config-path /var/lib/jenkins/workspace/gitconfig
+                apictl remove env dev
                 envs=$(apictl get envs --format "{{.Name}}")
                 if [ -z "$envs" ]; 
                 then 
