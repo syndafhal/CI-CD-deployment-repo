@@ -25,18 +25,18 @@
 
    
 
-    stages {
+   
         
         stage('Preparation') {
-        steps{
+        
         git branch: "main",
-        url: 'https://github.com/syndafhal/Deployment.git'}
+        url: 'https://github.com/syndafhal/Deployment.git'
     }
     
         
 
         stage('Setup Environment for APICTL') {
-            steps {
+            
             environment {
                PATH = "/home/synda/Bureau/apictl:$PATH"}
     
@@ -57,8 +57,8 @@
                     fi
                 fi
                 '''
-            }
+            
         }
         
    
-}}
+}
