@@ -7,7 +7,7 @@ pipeline {
 environment {
         PATH = "/home/synda/Bureau/apictl:$PATH"
     }
-
+    stages {
 
 node {
 
@@ -57,3 +57,4 @@ node {
 
      
 }}
+}
