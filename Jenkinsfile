@@ -36,6 +36,7 @@ environment {
                     apictl add env dev --apim https://10.1.14.6:9443 
                     fi
                 fi
+                apictl get envs
                 '''
             }
         }
