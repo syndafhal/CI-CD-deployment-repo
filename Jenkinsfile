@@ -1,6 +1,3 @@
-
-pipeline {
-
     node {
 
     properties([
@@ -17,17 +14,7 @@ pipeline {
         ]
         ])
     ]
-              )}
-    
-    
-environment {
-        PATH = "/home/synda/Bureau/apictl:$PATH"
-    }
- 
-
-
-
-    stages {
+              )
 
 
     stage('Preparation') {
@@ -56,5 +43,4 @@ environment {
     
 
      
-}
 }
