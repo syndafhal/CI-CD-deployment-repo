@@ -41,5 +41,33 @@ environment {
                 '''
             }
         }
+          stage('Deploy to Development Environment') {
+
+            steps {
+         sh '''#!/bin/bash
+
+        # download the artifact from the artifact repository
+        wget https://server2.jfrog.io/artifactory/repo/PetstoreAPI/1.0.0/SwaggerPetstore_1.0.0.zip 
+        paramPath=DeploymentArtifacts_SwaggerPetstore-1.0.0
+        echo "Param path :"$paramPath
+
+       
+        # login to the dev environment
+        apictl login dev -u admin -p admin -k
+
+        '''
+                
+       
+      
+
+      
+
+
+      
+
+        
+
+            }
+        }
        
     }}
