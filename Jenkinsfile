@@ -55,7 +55,7 @@ environment {
         # login to the dev environment
         apictl login dev -u admin -p admin -k
         # import the artifact
-        message=$(apictl import api -f PetstoreAPI -e dev --update -k)
+        message=$(apictl import api -f PetstoreAPI --params DeploymentArtifacts_SwaggerPetstore-1.0.0 -e dev --update -k)
     
 
 
