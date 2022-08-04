@@ -3,7 +3,7 @@ environments:
     configs:
       endpoints:
           production:
-              url: 'https://mocki.io/v1/55844f7b-1882-4b38-b1ab-06a18dcd6d22'
+              url: 'https://petstore.swagger.io/v2/'
       deploymentEnvironments:
           - displayOnDevportal: true
             deploymentEnvironment: Default
