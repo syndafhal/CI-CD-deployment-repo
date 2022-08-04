@@ -3,7 +3,7 @@ environments:
     configs:
       endpoints:
           production:
-              url: 'https://petstore.swagger.io/v1/'
+              url: 'https://petstore.swagger.io/v2/'
       deploymentEnvironments:
           - displayOnDevportal: true
             deploymentEnvironment: Default
