@@ -1,16 +1,10 @@
 environments:
-    - name: dev
-      configs:
-          deploymentEnvironments:
-              - displayOnDevportal: true
-                deploymentEnvironment: Default
-                deploymentVhost: localhost
-          policies:
-              - Gold
-              - Silver
-          security:
-              production:
-                  enabled: true
-                  type: basic
-                  username: admin
-                  password: admin     
+  - name: dev
+    configs:
+      endpoints:
+          production:
+              url: 'https://localhost:9443/am/sample/pizzashack/v1/api/'
+      deploymentEnvironments:
+          - displayOnDevportal: true
+            deploymentEnvironment: Default
+            deploymentVhost : localhost
