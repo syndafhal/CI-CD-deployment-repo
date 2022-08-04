@@ -13,7 +13,7 @@ environment {
         stage('Preparation') {
             steps{
                 git branch: "main",
-                url: 'https://github.com/chamilaadhi/poc-cicd-deployment-repo.git'
+                url: 'https://github.com/syndafhal/Deployment.git'
 
             }
         }
