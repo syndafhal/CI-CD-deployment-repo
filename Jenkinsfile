@@ -55,6 +55,7 @@ environment {
         # login to the dev environment
         apictl login dev -u admin -p admin -k
         # import the artifact
+         message=$(apictl import api -f -PizzaShackAPI-1.0.0 -params DeploymentArtifacts_PizzaShackAPI-1.0.0 -e dev --update -k)
         
     
 
