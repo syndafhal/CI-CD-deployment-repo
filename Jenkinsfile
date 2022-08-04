@@ -31,7 +31,7 @@ environment {
                     echo "No environment configured. Setting dev environment.."
                     apictl add env dev --apim https://10.1.31.188:9443 
                 else
-                    echo "Environme10.1.31.18810.1.31.188nts :"$envs
+                    echo "Environments :"$envs
                     if [[ $envs != *"dev"* ]]; then
                     echo "Dev environment is not configured. Setting dev environment.."
                     apictl add env dev --apim https://10.1.31.188:9443
