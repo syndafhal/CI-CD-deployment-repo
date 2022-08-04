@@ -1,0 +1,16 @@
+environments:
+    - name: dev
+      configs:
+          deploymentEnvironments:
+              - displayOnDevportal: true
+                deploymentEnvironment: Default
+                deploymentVhost: localhost
+          policies:
+              - Gold
+              - Silver
+          security:
+              production:
+                  enabled: true
+                  type: basic
+                  username: admin
+                  password: admin     
