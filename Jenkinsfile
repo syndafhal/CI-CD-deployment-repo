@@ -47,15 +47,15 @@ environment {
          sh '''#!/bin/bash
 
         # download the artifact from the artifact repository
-        wget https://server2.jfrog.io/artifactory/repo/PetstoreAPI/1.0.0/SwaggerPetstore_1.0.0.zip 
-        paramPath=DeploymentArtifacts_SwaggerPetstore-1.0.0
+        wget https://server2.jfrog.io/artifactory/repo/PizzaShackAPI-1.0.0/1.0.0/PizzaShackAPI_1.0.0.zip 
+        paramPath=DeploymentArtifacts_PizzaShackAPI-1.0.0
         echo "Param path :"$paramPath
 
        
         # login to the dev environment
         apictl login dev -u admin -p admin -k
         # import the artifact
-        message=$(apictl import api -f PetstoreAPI --params DeploymentArtifacts_SwaggerPetstore-1.0.0 -e dev --update -k)
+        
     
 
 
