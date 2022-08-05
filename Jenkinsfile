@@ -47,20 +47,8 @@ environment {
          sh '''#!/bin/bash
 
         # download the artifact from the artifact repository
-        wget https://server2.jfrog.io/artifactory/repo/PizzaShackAPI-1.0.0/1.0.0/PizzaShackAPI_1.0.0.zip 
-        paramPath=DeploymentArtifacts_PizzaShackAPI-1.0.0
-        echo "Param path :"$paramPath
-        echo $location
-
+        wget https://server2.jfrog.io/artifactory/repo/$location
        
-        # login to the dev environment
-        apictl login dev -u admin -p admin -k
-        # import the artifact
-         message=$(apictl import api -f PizzaShackAPI-1.0.0 --params DeploymentArtifacts_PizzaShackAPI-1.0.0 -e dev --update -k)
-        
-    
-
-
         '''
                 
        
