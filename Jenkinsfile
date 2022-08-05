@@ -28,7 +28,7 @@ environment {
                 envs=$(apictl get envs --format "{{.Name}}")
                 if [ -z "$envs" ]; 
                 then 
-                    echo "No environment configured Setting dev environment.."
+                    echo "No environmen configured Setting dev environment.."
                     apictl add env dev --apim https://10.1.14.6:9443 
                 else
                     echo "Environments :"$envs
