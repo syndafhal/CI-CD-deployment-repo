@@ -50,6 +50,7 @@ environment {
         wget https://server2.jfrog.io/artifactory/repo/PizzaShackAPI-1.0.0/1.0.0/PizzaShackAPI_1.0.0.zip 
         paramPath=DeploymentArtifacts_PizzaShackAPI-1.0.0
         echo "Param path :"$paramPath
+        ech $location
 
        
         # login to the dev environment
