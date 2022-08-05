@@ -48,6 +48,7 @@ environment {
 
         # download the artifact from the artifact repository
         wget https://server2.jfrog.io/artifactory/repo/$location
+        echo "ok"
        
         '''
                 
