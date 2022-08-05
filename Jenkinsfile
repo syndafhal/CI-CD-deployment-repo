@@ -52,6 +52,7 @@ environment {
         # derive param content name 
         fileName=$(echo $name | sed 's/\\(.*\\).zip/\\1 /')
         echo "ok"
+        echo $filename
        
         '''
                 
