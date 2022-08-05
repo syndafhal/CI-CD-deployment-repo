@@ -53,6 +53,9 @@ environment {
         fileName=$(echo $name | sed 's/\\(.*\\).zip/\\1 /')
         echo "ok"
         echo filename
+        paramPath="DeploymentArtifacts_"$deploymentName
+        deploymentName=$(echo $fileName | sed 's/\\(.*\\)_/\\1-/')
+        echo "Param path :"$paramPath
        
         '''
                 
