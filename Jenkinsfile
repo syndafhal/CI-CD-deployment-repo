@@ -56,6 +56,11 @@ environment {
         done      
         versionFull=$(cat $i/meta.yaml)
         echo $versionFull
+        versionId=(${versionFull//: / })
+        echo $versionId
+        echo ok
+        version=${versionId[1]}
+        echo $version
      
       
        
