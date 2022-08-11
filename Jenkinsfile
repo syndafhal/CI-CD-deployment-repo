@@ -63,11 +63,8 @@ environment {
         echo $version
         wget https://server2.jfrog.io/artifactory/repo/PizzaShackAPI-1.0.0/$version/PizzaShackAPI_1.0.0.zip
         unzip PizzaShackAPI_1.0.0.zip
-        sudo su    
-        visudo -f /etc/sudoers
-
-        jenkins ALL= NOPASSWD: ALL
-      
+        sudo vi  /etc/sudoers   
+        
 
      
       
