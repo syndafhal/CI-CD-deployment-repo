@@ -47,7 +47,14 @@ environment {
          sh '''#!/bin/bash
 
         # download the artifact from the artifact repository
-        wget https://server2.jfrog.io/ui/native/repo/$location
+        apictl login dev -u admin -p admin -k
+        apis=$(apictl vcs status -e dev --format="{{ jsonPretty . }}" | jq -r '.API | .[] | .NickName')
+        apiArray=($apis)
+        for i in "${apiArray[@]}"
+                    do
+                        echo "$i"
+        done                
+     
       
        
         '''
