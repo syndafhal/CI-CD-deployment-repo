@@ -61,7 +61,8 @@ environment {
         echo ok
         version=${versionId[1]}
         echo $version
-        cd /home/synda/.wso2apictl/exported/apis
+        cd /var/lib/jenkins/workspace/CI-CD Dev Deploy
+
 
         
         
