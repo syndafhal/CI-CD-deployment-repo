@@ -48,6 +48,7 @@ environment {
 
         # download the artifact from the artifact repository
         wget https://server2.jfrog.io/ui/native/repo/PizzaShackAPI-1.0.0/1.0.0/PizzaShackAPI_1.0.0.zip 
+        echo $.data.name
         echo "ok"
         echo $
         # derive param content name 
