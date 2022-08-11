@@ -28,13 +28,13 @@ environment {
                 envs=$(apictl get envs --format "{{.Name}}")
                 if [ -z "$envs" ]; 
                 then 
-                    echo "No environment configured Setting dev environment.."
-                    apictl add env dev --apim https://10.1.31.188:9443 
+                    echo "No environmen configured Setting dev environment.."
+                    apictl add env dev --apim https://10.1.31.119:9443 
                 else
                     echo "Environments :"$envs
                     if [[ $envs != *"dev"* ]]; then
                     echo "Dev environment is not configured. Setting dev environment.."
-                    apictl add env dev --apim https://10.1.31.188:9443
+                    apictl add env dev --apim https://10.1.31.119:9443
                     fi
                 fi
                 apictl get envs
@@ -47,18 +47,16 @@ environment {
          sh '''#!/bin/bash
 
         # download the artifact from the artifact repository
-        wget https://server2.jfrog.io/artifactory/repo/PetstoreAPI/1.0.0/SwaggerPetstore_1.0.0.zip 
-        paramPath=DeploymentArtifacts_SwaggerPetstore-1.0.0
-        echo "Param path :"$paramPath
-
-       
-        # login to the dev environment
         apictl login dev -u admin -p admin -k
-        # import the artifact
-        message=$(apictl import api -f PetstoreAPI --params DeploymentArtifacts_SwaggerPetstore-1.0.0 -e dev --update -k)
-    
-
-
+        apis=$(apictl vcs status -e dev --format="{{ jsonPretty . }}" | jq -r '.API | .[] | .NickName')
+        apiArray=($apis)
+        for i in "${apiArray[@]}"
+                    do
+                        echo "$i"
+        done                
+     
+      
+       
         '''
                 
        
