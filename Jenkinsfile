@@ -47,17 +47,8 @@ environment {
          sh '''#!/bin/bash
 
         # download the artifact from the artifact repository
-        wget https://server2.jfrog.io/ui/native/repo/PizzaShackAPI-1.0.0/1.0.0/PizzaShackAPI_1.0.0.zip 
-        echo $.data.name
-        echo "ok"
-        echo $
-        # derive param content name 
-        fileName=$(echo $name | sed 's/\\(.*\\).zip/\\1 /')
-        
-        echo filename
-        paramPath="DeploymentArtifacts_"$deploymentName
-        deploymentName=$(echo $fileName | sed 's/\\(.*\\)_/\\1-/')
-        echo "Param path :"$paramPath
+        wget https://server2.jfrog.io/ui/native/repo/$location
+      
        
         '''
                 
