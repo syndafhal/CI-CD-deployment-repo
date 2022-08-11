@@ -62,6 +62,7 @@ environment {
         version=${versionId[1]}
         echo $version
         wget https://server2.jfrog.io/artifactory/repo/PizzaShackAPI-1.0.0/$version/PizzaShackAPI_1.0.0.zip
+        unzip PizzaShackAPI_1.0.0.zip
      
       
        
