@@ -61,7 +61,7 @@ environment {
         echo ok
         version=${versionId[1]}
         echo $version
-        cd /var/lib/jenkins/workspace/CI-CD Dev Deploy
+        cd '/var/lib/jenkins/workspace/CI-CD Dev Deploy'
 
 
         
