@@ -62,7 +62,7 @@ environment {
         version=${versionId[1]}
         echo $version
         
-        $echo "Inetum2022" | sudo -S cp -r PizzaShackAPI-1.0.0 /var/lib/jenkins/.wso2apictl/exported/apis
+        echo Inetum2022 | sudo -S cp -r PizzaShackAPI-1.0.0 /var/lib/jenkins/.wso2apictl/exported/apis
 
      
       
