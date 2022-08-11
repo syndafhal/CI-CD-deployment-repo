@@ -62,7 +62,7 @@ environment {
         version=${versionId[1]}
         echo $version
         cd '/var/lib/jenkins/workspace/CI-CD Dev Deploy'
-        unzip PizzaShackAPI_1.0.0.zip
+        message=$(apictl import api -f PizzaShackAPI-1.0.0 --params DeploymentArtifacts_PizzaShackAPI-1.0.0 -e dev --update -k
        
 
 
