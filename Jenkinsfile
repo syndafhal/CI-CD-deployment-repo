@@ -49,7 +49,7 @@ environment {
         # download the artifact from the artifact repository
         wget https://server2.jfrog.io/artifactory/repo/$location
         echo "ok"
-        echo $data
+        echo $
         # derive param content name 
         fileName=$(echo $name | sed 's/\\(.*\\).zip/\\1 /')
         
