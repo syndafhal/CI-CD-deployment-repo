@@ -49,9 +49,10 @@ environment {
         # download the artifact from the artifact repository
         wget https://server2.jfrog.io/artifactory/repo/$location
         echo "ok"
+        echo $data
         # derive param content name 
         fileName=$(echo $name | sed 's/\\(.*\\).zip/\\1 /')
-        echo "ok"
+        
         echo filename
         paramPath="DeploymentArtifacts_"$deploymentName
         deploymentName=$(echo $fileName | sed 's/\\(.*\\)_/\\1-/')
