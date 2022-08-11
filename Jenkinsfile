@@ -55,6 +55,7 @@ environment {
                         echo "$i"
         done      
         versionFull=$(cat $i/meta.yaml)
+        echo $versionFull
      
       
        
