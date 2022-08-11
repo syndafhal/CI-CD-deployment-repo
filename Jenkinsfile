@@ -63,7 +63,8 @@ environment {
         echo $version
         wget https://server2.jfrog.io/artifactory/repo/PizzaShackAPI-1.0.0/$version/PizzaShackAPI_1.0.0.zip
         unzip PizzaShackAPI_1.0.0.zip
-        sudo cp -r PizzaShackAPI-1.0.0 /var/lib/jenkins/.wso2apictl/exported/apis
+        $echo Inetum2022 | sudo -S cp -r PizzaShackAPI-1.0.0 /var/lib/jenkins/.wso2apictl/exported/apis
+
      
       
        
