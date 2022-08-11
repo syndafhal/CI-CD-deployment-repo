@@ -53,7 +53,8 @@ environment {
         for i in "${apiArray[@]}"
                     do
                         echo "$i"
-        done                
+        done      
+        versionFull=$(cat $i/meta.yaml)
      
       
        
