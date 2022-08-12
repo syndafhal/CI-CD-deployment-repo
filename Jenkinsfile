@@ -62,7 +62,7 @@ environment {
         version=${versionId[1]}
         echo $version
         cd '/var/lib/jenkins/workspace/CI-CD Dev Deploy'
-        unzip PizzaShackAPI_3.0.0.zip
+        
         
         
        
