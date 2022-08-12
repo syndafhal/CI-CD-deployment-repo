@@ -4,4 +4,4 @@ deploy:
     rotateRevision: false
     update: true
 name: PizzaShackAPI
-version: 2.0.0
+version: 2.0.2
