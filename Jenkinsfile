@@ -65,6 +65,12 @@ environment {
         wget https://server2.jfrog.io/artifactory/repo/PizzaShackAPI-1.0.0/$version/PizzaShackAPI_1.0.0.zip 
         unzip PizzaShackAPI_1.0.0.zip 
         message=$(apictl import api -f PizzaShackAPI-1.0.0 --params DeploymentArtifacts_PizzaShackAPI-1.0.0 -e dev --update -k)
+        message=$(apictl import api -f $name --params $paramPath -e dev --update -k)
+        if [ "$message" = "Successfully imported API." ]; then
+            echo "Successfully imported API."
+        else
+            echo $message
+        fi
         
         
         
