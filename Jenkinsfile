@@ -65,14 +65,8 @@ environment {
         echo $version
         cd '/var/lib/jenkins/workspace/CI-CD Dev Deploy'
         wget -o PizzaShackAPI_$version.zip https://server2.jfrog.io/artifactory/repo/PizzaShackAPI-1.0.0/$version/PizzaShackAPI_1.0.0.zip 
-        unzip PizzaShackAPI_$version.zip 
-        message=$(apictl import api -f PizzaShackAPI-$version --params DeploymentArtifacts_PizzaShackAPI-1.0.0 -e dev --update -k)
-        if [ "$message" = "Successfully imported API." ]; then
-            echo "Successfully imported API."
-        else
-            echo $message
-        fi
-        
+        unzip PizzaShackAPI_$version.zip
+       
         
         
         
