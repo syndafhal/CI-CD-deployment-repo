@@ -48,7 +48,6 @@ environment {
          declare -i x=0
           
          
-
         # download the artifact from the artifact repository
         apictl login dev -u admin -p admin -k
         apis=$(apictl vcs status -e dev --format="{{ jsonPretty . }}" | jq -r '.API | .[] | .NickName')
@@ -84,15 +83,12 @@ environment {
         
         
        
-
-
         
         
         
         
         
         
-
      
       
        
@@ -109,3 +105,6 @@ environment {
         
 
             }
+        }
+       
+    }}
