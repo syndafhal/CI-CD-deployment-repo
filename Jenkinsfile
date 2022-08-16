@@ -45,7 +45,8 @@ environment {
 
             steps {
          sh '''#!/bin/bash
-         $i=0
+         declare -i x=0
+          
          
 
         # download the artifact from the artifact repository
@@ -72,8 +73,8 @@ environment {
         else
             echo $message
         fi
-        $i=$i+1
-        echo $i
+        x=$((x+1))
+        echo $x
         
         
         
