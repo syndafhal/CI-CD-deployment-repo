@@ -64,7 +64,7 @@ environment {
         version=${versionId[1]}
         echo $version
         cd '/var/lib/jenkins/workspace/CI-CD Dev Deploy'
-        wget -o PizzaShackAPI_3.0.2.zip https://server2.jfrog.io/artifactory/repo/PizzaShackAPI-1.0.0/$version/PizzaShackAPI_1.0.0.zip -0 
+        wget -o PizzaShackAPI_3.0.2.zip https://server2.jfrog.io/artifactory/repo/PizzaShackAPI-1.0.0/$version/PizzaShackAPI_1.0.0.zip 
       
         
         
