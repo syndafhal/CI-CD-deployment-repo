@@ -45,6 +45,8 @@ environment {
 
             steps {
          sh '''#!/bin/bash
+         $i=0
+         
 
         # download the artifact from the artifact repository
         apictl login dev -u admin -p admin -k
@@ -70,6 +72,8 @@ environment {
         else
             echo $message
         fi
+        $i=$i+1
+        echo $i
         
         
         
