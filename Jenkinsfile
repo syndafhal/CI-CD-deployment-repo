@@ -29,12 +29,12 @@ environment {
                 if [ -z "$envs" ]; 
                 then 
                     echo "No environmen configured Setting dev environment.."
-                    apictl add env dev --apim https://10.1.13.49:9443 
+                    apictl add env dev --apim https://10.1.14.6:9443 
                 else
                     echo "Environments :"$envs
                     if [[ $envs != *"dev"* ]]; then
                     echo "Dev environment is not configured. Setting dev environment.."
-                    apictl add env dev --apim https://10.1.13.49:9443
+                    apictl add env dev --apim https://10.1.14.6:9443
                     fi
                 fi
                 apictl get envs
