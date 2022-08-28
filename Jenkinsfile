@@ -2,11 +2,9 @@ pipeline {
 
     agent any
     
-    
 environment {
         PATH = "/home/synda/Bureau/apictl:$PATH"
     }
-
 
     stages {
         
@@ -17,7 +15,7 @@ environment {
 
             }
         }
-
+        
         stage('Setup Environment for APICTL') {
             steps {
                 sh '''#!/bin/bash
