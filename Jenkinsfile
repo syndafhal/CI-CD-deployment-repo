@@ -69,38 +69,9 @@ environment {
             echo "Successfully imported API."
         else
             echo $message
-        fi
-       
-        
-        
-        
-        
-       
-        
-        
-        
-       
-        
-        
-        
-        
-        
-        
-     
-      
+        fi 
        
         '''
-                
-       
-      
-
-      
-
-
-      
-
-        
-
             }
         }
        
