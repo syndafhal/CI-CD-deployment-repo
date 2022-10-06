@@ -1,1 +1,1 @@
-# Source repository contains the files and metadata related to the API
+#  Deployment repository contains the configurations related to each environment this APIs is getting deployed.
